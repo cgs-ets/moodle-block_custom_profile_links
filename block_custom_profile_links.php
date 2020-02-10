@@ -113,7 +113,7 @@ class block_custom_profile_links extends block_base {
             $iconimages = array();
 
             $instanceid = $DB->get_record('block_instances', ['parentcontextid' => 1, 'blockname' => get_string('blockname', 'block_custom_profile_links')]);
-            $contextid = $DB->get_record('context', ['instanceid' => $instanceid->id]);
+            $contextid = $DB->get_record('context', ['instanceid' => $instanceid->id, 'contextlevel' =>80]);
 
             $fs = get_file_storage();
 
